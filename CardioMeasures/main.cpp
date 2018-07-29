@@ -1,11 +1,18 @@
-#include "mainwindow.h"
 #include <QApplication>
+#include <QPushButton>
+#include <QWidget>
+#include <QFont>
+#include <QIcon>
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QApplication Qapp(argc, argv);
 
-    return a.exec();
+    //Création de la fenêtre principale
+    MainWindow fenetre;
+    fenetre.show();
+
+    //Return
+    return Qapp.exec();
 }

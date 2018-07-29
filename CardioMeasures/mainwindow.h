@@ -1,22 +1,23 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QApplication>
+#include <QWidget>
+#include <QPushButton>
+#include <QLCDNumber>
+#include <QSlider>
 
-namespace Ui {
-class MainWindow;
-}
-
-class MainWindow : public QMainWindow
+class MainWindow : public QWidget
 {
-    Q_OBJECT
+    public:
+    MainWindow();
 
-public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    private:
+    QPushButton *m_bouton;
+    QLCDNumber *m_lcd;
+    QSlider *m_slider;
 
-private:
-    Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H
